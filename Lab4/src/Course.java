@@ -16,7 +16,8 @@ public class Course {
 
     public void getStudents() {
         for (int i = 0; i < students.size(); i++) {
-             System.out.println("        <student id=\"" + students.get(i).getId() + "\" year=\"" + students.get(i).getYear() + "\">" + students.get(i).getName() + "</student>");
+             System.out.println("        <student id=\"" + students.get(i).getId() + "\" year=\""
+                     + students.get(i).getYear() + "\">" + students.get(i).getName() + "</student>");
         }
     }
 
