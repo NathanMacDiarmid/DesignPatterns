@@ -1,28 +1,13 @@
-import java.util.ArrayList;
-
 public class Course {
 
     private String name;
-    private ArrayList<Student> students;
 
     public Course(String code) {
         this.name = code;
-        this.students = new ArrayList<>();
     }
 
     public String getName() {
         return name;
-    }
-
-    public void getStudents() {
-        for (int i = 0; i < students.size(); i++) {
-             System.out.println("        <student id=\"" + students.get(i).getId() + "\" year=\""
-                     + students.get(i).getYear() + "\">" + students.get(i).getName() + "</student>");
-        }
-    }
-
-    public void addStudents(Student student) {
-        students.add(student);
     }
 
     public static void main(String[] args) {
@@ -38,14 +23,14 @@ public class Course {
         s2.setId(400);
         s2.setYear(2);
 
-        course.addStudents(s1);
-        course.addStudents(s2);
+        s1.addStudents(s1);
+        s1.addStudents(s2);
 
         System.out.println("<course>");
         System.out.println("    <code>" + course.getName() + "</code>");
         System.out.println("    <prof>" + prof.getName() + "</prof>");
         System.out.println("    <class>");
-        course.getStudents();
+        s1.getStudents();
         System.out.println("    </class>");
         System.out.println("</course>");
 
