@@ -38,6 +38,18 @@ public class TicTacToeFrame extends JFrame implements TicTacToeView {
     public void handleTicTacToeStatusUpdate(TicTacToeModel ticTacToeModel, TicTacToeModel.Status status, int x, int y) {
         String label = ticTacToeModel.getTurn()? "X" : "O";
         buttons[x][y].setText(label);
+        if (status == TicTacToeModel.Status.X_WON) {
+            JOptionPane.showMessageDialog(this, "X has won!");
+            System.exit(0);
+        }
+        else if (status == TicTacToeModel.Status.O_WON) {
+            JOptionPane.showMessageDialog(this, "O has won!");
+            System.exit(0);
+        }
+        else if (status == TicTacToeModel.Status.TIE) {
+            JOptionPane.showMessageDialog(this, "It's a Tie!");
+            System.exit(0);
+        }
     }
 
     public static void main(String[] args) {
