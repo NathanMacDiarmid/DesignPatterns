@@ -44,6 +44,6 @@ public class BuddyInfo {
 
     @Override
     public String toString() {
-        return "\"" + buddy + "#" + address + "#" + number + "\"";
+        return buddy + "#" + address + "#" + number;
     }
 }
