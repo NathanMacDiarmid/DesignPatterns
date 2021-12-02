@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<project name="Lab9 Part2 - Ant" default="packaging">
+
+    <target name="packaging">
+        <javac srcdir="/Users/nathan/Documents/SYSC 3110A/Lab9/src"
+               destdir="out/production/Lab9">
+        </javac>
+        <jar destfile="/Users/nathan/Documents/SYSC 3110A/Lab9/packaging.jar"
+             basedir="/Users/nathan/Documents/SYSC 3110A/Lab9/out/production/Lab9">
+            <manifest>
+                <attribute name="Main-Class"
+                           value="AddressBook"/>
+            </manifest>
+        </jar>
+    </target>
+
+</project>
